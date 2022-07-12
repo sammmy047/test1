@@ -1,8 +1,8 @@
-FROM python:3.6
+FROM python:latest
 RUN mkdir /data
 WORKDIR /data
 ADD . . 
-RUN pip install flask
+RUN pip3 install flask
 ENV PORT 5000
 EXPOSE 5000
 CMD [ "python", "server.py" ]
