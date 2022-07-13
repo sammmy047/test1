@@ -1,7 +1,7 @@
-FROM python:latest
+FROM python:3.7
 RUN mkdir /data
 WORKDIR /data
-ADD . . 
+COPY . . 
 RUN pip install Flask
 ENV PORT 5000
 EXPOSE 5000
